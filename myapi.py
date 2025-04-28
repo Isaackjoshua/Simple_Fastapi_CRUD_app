@@ -38,7 +38,7 @@ def createpost(post: Post):
 def get_posts(id: int, response: Response):# that int keyword int the parameter helps us ensure that the id is an integer,as a path is a always a string
     post = find_post(id)
     if not post:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Post with id {id} was no found")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Post with id {id} was no found")# raise exception
        # response.status_code = status.HTTP_404_NOT_FOUND
        #return {"Message": f"Post with id {id} was no found"}
     return{"post_detail": post}
